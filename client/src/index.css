@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 10px 20px;
+
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+a {
+  text-decoration: none;
+  color: initial;
+}
+
+* {
+  box-sizing: border-box;
+}
