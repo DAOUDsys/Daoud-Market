@@ -95,6 +95,11 @@ export const BagContainer = styled.div`
   justify-content: center;
 `;
 export const P = styled.p`
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 0px 3px;
   position: absolute;
-  bottom: -15px;
+  bottom: -14px;
+  pointer-events: none;
 `;
