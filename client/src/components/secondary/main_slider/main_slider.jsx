@@ -11,14 +11,14 @@ function MainSlider() {
   let certainPicture = sliderPictures[index];
 
   const slidePhotosRight = () => {
-    setIndex(index+1);
+    setIndex(index + 1);
     if (index === 3) setIndex(0);
-    certainPicture =sliderPictures[index];
+    certainPicture = sliderPictures[index];
   };
   const slidePhotosLeft = () => {
-    setIndex(index-1);;
+    setIndex(index - 1);
     if (index === 0) setIndex(3);
-    certainPicture =sliderPictures[index];
+    certainPicture = sliderPictures[index];
   };
 
   return (

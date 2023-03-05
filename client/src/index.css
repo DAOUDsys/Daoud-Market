@@ -19,5 +19,6 @@ a {
 }
 
 * {
+  outline: none;
   box-sizing: border-box;
 }

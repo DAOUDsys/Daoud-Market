@@ -1,18 +1,20 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 100vw;
+  width: 100%;
   height: calc(100% - 94px);
   position: relative;
   padding: 0px;
+  overflow: hidden;
   @media (max-width: 600px) {
     height: 200px;
   }
 `;
 export const Image = styled.img`
   object-fit: cover;
+  overflow: hidden;
   width: 100%;
-  height: calc(100vh - 94px);
+  height: 100%;
   padding: 0px;
   margin: 0px;
   @media (max-width: 600px) {
@@ -46,7 +48,7 @@ export const Dot = styled.div`
   width: 15px;
   margin: 0 10px;
   border-radius: 50px;
-  background-color: ${(props) => props.on ? "gray" : "#c7c3c3"};
+  background-color: ${(props) => (props.on ? "gray" : "#c7c3c3")};
   &:hover {
     background-color: gray;
     cursor: pointer;

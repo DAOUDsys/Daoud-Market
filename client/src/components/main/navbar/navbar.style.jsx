@@ -6,6 +6,9 @@ import { ReactComponent as person } from "../../../assets/constants/person.svg";
 import { ReactComponent as search } from "../../../assets/constants/search.svg";
 import { ReactComponent as bag } from "../../../assets/constants/bag.svg";
 
+let atTopMost;
+document.body.scrollTop === 0 ? atTopMost=true : atTopMost=false;
+
 const iconStyle = css`
   width: 30px;
   height: 30px;
@@ -38,14 +41,19 @@ export const Search = styled(search)`
   }
 `;
 export const Container = styled.div`
-  width: 100vw;
+  width: 100%;
   height: 90px;
   background-color: white;
-  position: relative;
+  position: sticky;
+  top: 0px;
+  z-index: 10;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: solid #a19d9d3d 1px;
   padding: 0px 3vw;
+  transform: 1s smooth;
+
 `;
 export const Icons = styled.div`
   display: flex;
@@ -63,13 +71,13 @@ export const SearchFiled = styled.input`
   max-width: 250px;
   padding: 8px;
   font-size: 18px;
-  background-color: whitesmoke;
-  outline: none;
+  background-color: #f5f5f5a7;
   transition: width 0.3 linear, width 0.3s linear;
   display: ${(props) => (props.isDisplay ? "inline" : "none")};
   &:hover,
   &:focus {
-    border-color: black;
+    background-color: whitesmoke;
+    border-color: #000000a7;
   }
   @media (max-width: 600px) {
     visibility: visible;
@@ -83,7 +91,7 @@ export const SearchFiled = styled.input`
 export const NavLink = styled(Link)`
   margin: 0 5px;
   &:hover {
-    text-decoration: underline;
+    font-weight: bold;
   }
   @media (max-width: 900px) {
     display: none;
