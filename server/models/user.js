@@ -19,14 +19,30 @@ const UserSchema = new mongoose.Schema({
   },
   role: {
     type: String,
-    enum: ["user", "publisher"],
+    enum: ["user", "admin", "dealer"],
     default: "user",
+  },
+  phone: {
+    type: String,
+    required: [true, "please add a phone number"],
+    match: [/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im],
   },
   password: {
     type: String,
     required: [true, "please add a password"],
     minlength: 6,
     select: false,
+  },
+  loved: {
+    type: [String],
+    default: [],
+  },
+  picture: {
+    type: String,
+  },
+  cart: {
+    type: [String],
+    default: [],
   },
   resetPasswordToken: String,
   resetPasswordExpire: Date,
@@ -38,7 +54,7 @@ const UserSchema = new mongoose.Schema({
 
 // encrypt password using bcrypt
 UserSchema.pre("save", async function (next) {
-  if(!this.isModified('password')) {
+  if (!this.isModified("password")) {
     next();
   }
   const salt = await bcrypt.genSalt(10);
@@ -68,10 +84,10 @@ UserSchema.methods.getResetPasswordToken = function () {
     .update(resetToken)
     .digest("hex");
 
-  // set expire 
-  this.resetPasswordExpire = Date.now() + 10*1000*60;
+  // set expire
+  this.resetPasswordExpire = Date.now() + 10 * 1000 * 60;
 
-  return resetToken
+  return resetToken;
 };
 
 const User = mongoose.model("User", UserSchema);

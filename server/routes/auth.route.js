@@ -17,7 +17,7 @@ authRouter.post("/register", registerUser);
 authRouter.post("/login", loginUser);
 authRouter.get("/logout", logout);
 authRouter.get("/me", protect, getMe);
-authRouter.post("/forgotpassword", protect,forgotPassword);
+authRouter.post("/forgotpassword", forgotPassword);
 authRouter.put("/updatedetails", protect, updateDetails);
 authRouter.put("/updatepassword", protect, updatePassword);
 authRouter.put("/forgotpassword/:resetpassword", resetPassword);

@@ -12,12 +12,11 @@ const sendEmail = async (options) => {
   });
 
   const message = {
-    from: `${process.env.FROM_NAME} <${process.env.FROM_EMAIL}>`, // sender address
+    from: `${process.env.FROM_NAME} <${process.env.HOTMAIL_EMAIL}>`, // sender address
     to: options.email, // list of receivers
     subject: options.subject, // Subject line
     text: options.message, // plain text body
   };
-
   const info = await transporter.sendMail(message);
   console.log("Message sent: %s", info.response);
 };

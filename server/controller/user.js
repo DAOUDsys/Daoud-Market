@@ -5,7 +5,25 @@ import User from "../models/user.js";
 // @route    GET api/v1/auth/users
 // @access   Privet-Admin
 export const getAllUsers = asyncHandler(async (req, res, next) => {
-  res.status(200).json(res.advancedResults);
+  const page = req.query.page || 1;
+  try {
+    const limit = 18;
+    const startIndex = (Number(page) - 1) * limit; // get the starting index for every page
+    const total = await User.countDocuments({});
+
+    const data = await User.find()
+      .sort({ _id: -1 })
+      .limit(limit)
+      .skip(startIndex);
+
+    res.status(200).json({
+      data,
+      currentPage: Number(page),
+      numberOfPages: Math.ceil(total / limit),
+    });
+  } catch (error) {
+    res.status(404).json({ message: error.message });
+  }
 });
 // @desc     Get single user
 // @route    GET api/v1/auth/users/:id

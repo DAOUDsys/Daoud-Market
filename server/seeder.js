@@ -3,10 +3,8 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import path from "path";
 import { fileURLToPath } from "url";
-import bootcamp from "./models/Bootcamps.js";
-import Course from "./models/course.js";
 import User from "./models/user.js";
-import Review from "./models/review.js";
+import Product from "./models/product.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -18,26 +16,19 @@ dotenv.config({ path: "./config/config.env" });
 mongoose.connect(process.env.MONGO_URI);
 
 // read json files
-const bootcamps = JSON.parse(
-  fs.readFileSync(`${__dirname}/_data/bootcamps.json`, "utf-8")
-);
-const Courses = JSON.parse(
-  fs.readFileSync(`${__dirname}/_data/courses.json`, "utf-8")
-);
+
 const user = JSON.parse(
   fs.readFileSync(`${__dirname}/_data/users.json`, "utf-8")
 );
-const review = JSON.parse(
-  fs.readFileSync(`${__dirname}/_data/reviews.json`, "utf-8")
+const product = JSON.parse(
+  fs.readFileSync(`${__dirname}/_data/products.json`, "utf-8")
 );
 
 // import data into db
 const importData = async () => {
   try {
-    await bootcamp.create(bootcamps);
-    await Course.create(Courses);
     await User.create(user);
-    await Review.create(review);
+    await Product.create(product);
     console.log("data imported... ");
     process.exit();
   } catch (error) {
@@ -48,10 +39,8 @@ const importData = async () => {
 // delete data
 const deleteData = async () => {
   try {
-    await bootcamp.deleteMany();
-    await Course.deleteMany();
     await User.deleteMany();
-    await Review.deleteMany();
+    await Product.deleteMany();
     console.log("data deleted... ");
     process.exit();
   } catch (error) {

@@ -1,0 +1,156 @@
+[
+    {
+        "name":"headphones",
+        "price": 20,
+        "description":"it's just a demo the description doesn't matter",
+        "categories":["Wearable-Devices", "Electronics"],
+        "quantity": 500
+    },
+    {
+        "name":"iphone 11 case",
+        "price": 10,
+        "description":"it's just a demo the description doesn't matter",
+        "categories":["Phones", "Electronics"],
+        "quantity": 35
+    },
+    {
+        "name":"headphones",
+        "price": 20,
+        "description":"it's just a demo the description doesn't matter",
+        "categories":["Wearable-Devices", "electronics"],
+        "quantity": 500
+    },
+    {
+        "name":"headphones",
+        "price": 20,
+        "description":"it's just a demo the description doesn't matter",
+        "categories":["Wearable-Devices", "electronics"],
+        "quantity": 500
+    },
+    {
+        "name":"headphones",
+        "price": 20,
+        "description":"it's just a demo the description doesn't matter",
+        "categories":["Wearable-Devices", "electronics"],
+        "quantity": 500
+    },
+    {
+        "name":"headphones",
+        "price": 20,
+        "description":"it's just a demo the description doesn't matter",
+        "categories":["Wearable-Devices", "electronics"],
+        "quantity": 500
+    },
+    {
+        "name":"headphones",
+        "price": 20,
+        "description":"it's just a demo the description doesn't matter",
+        "categories":["Wearable-Devices", "electronics"],
+        "quantity": 500
+    },
+    {
+        "name":"headphones",
+        "price": 20,
+        "description":"it's just a demo the description doesn't matter",
+        "categories":["Wearable-Devices", "electronics"],
+        "quantity": 500
+    },
+    {
+        "name":"headphones",
+        "price": 20,
+        "description":"it's just a demo the description doesn't matter",
+        "categories":["Wearable-Devices", "electronics"],
+        "quantity": 500
+    },
+    {
+        "name":"headphones",
+        "price": 20,
+        "description":"it's just a demo the description doesn't matter",
+        "categories":["Wearable-Devices", "electronics"],
+        "quantity": 500
+    },
+    {
+        "name":"headphones",
+        "price": 20,
+        "description":"it's just a demo the description doesn't matter",
+        "categories":["Wearable-Devices", "electronics"],
+        "quantity": 500
+    },
+    {
+        "name":"headphones",
+        "price": 20,
+        "description":"it's just a demo the description doesn't matter",
+        "categories":["Wearable-Devices", "electronics"],
+        "quantity": 500
+    },
+    {
+        "name":"headphones",
+        "price": 20,
+        "description":"it's just a demo the description doesn't matter",
+        "categories":["Wearable-Devices", "electronics"],
+        "quantity": 500
+    },
+    {
+        "name":"headphones",
+        "price": 20,
+        "description":"it's just a demo the description doesn't matter",
+        "categories":["Wearable-Devices", "electronics"],
+        "quantity": 500
+    },
+    {
+        "name":"headphones",
+        "price": 20,
+        "description":"it's just a demo the description doesn't matter",
+        "categories":["Wearable-Devices", "electronics"],
+        "quantity": 500
+    },
+    {
+        "name":"headphones",
+        "price": 20,
+        "description":"it's just a demo the description doesn't matter",
+        "categories":["Wearable-Devices", "electronics"],
+        "quantity": 500
+    },
+    {
+        "name":"headphones",
+        "price": 20,
+        "description":"it's just a demo the description doesn't matter",
+        "categories":["Wearable-Devices", "electronics"],
+        "quantity": 500
+    },
+    {
+        "name":"headphones",
+        "price": 20,
+        "description":"it's just a demo the description doesn't matter",
+        "categories":["Wearable-Devices", "electronics"],
+        "quantity": 500
+    },
+    {
+        "name":"headphones",
+        "price": 20,
+        "description":"it's just a demo the description doesn't matter",
+        "categories":["Wearable-Devices", "electronics"],
+        "quantity": 500
+    },
+    {
+        "name":"headphones",
+        "price": 20,
+        "description":"it's just a demo the description doesn't matter",
+        "categories":["Wearable-Devices", "electronics"],
+        "quantity": 500
+    },
+    {
+        "name":"headphones",
+        "price": 20,
+        "description":"it's just a demo the description doesn't matter",
+        "categories":["Wearable-Devices", "electronics"],
+        "quantity": 500
+    },
+    {
+        "name":"headphones",
+        "price": 20,
+        "description":"it's just a demo the description doesn't matter",
+        "categories":["Wearable-Devices", "electronics"],
+        "quantity": 500
+    }
+]

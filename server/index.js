@@ -2,14 +2,22 @@ import express from "express";
 import dotenv from "dotenv";
 import helmet from "helmet";
 import cors from "cors";
+import path from "path";
+import { fileURLToPath } from "url";
+import fileupload from "express-fileupload";
 import cookieParser from "cookie-parser";
 import xss from "xss-clean";
 import rateLimit from "express-rate-limit";
 import hpp from "hpp";
 import mongoSanitize from "express-mongo-sanitize";
 import authRouter from "./routes/auth.route.js";
+import userRouter from "./routes/user.route.js";
+import productsRouter from "./routes/product.route.js";
 import { connectDB } from "./config/db.js";
 import { errorHandler } from "./middleware/error.js";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // load env vars
 dotenv.config({ path: "./config/config.env" });
@@ -18,6 +26,9 @@ dotenv.config({ path: "./config/config.env" });
 connectDB();
 
 const app = express();
+
+// file uploading
+app.use(fileupload());
 
 // body parser
 app.use(express.json());
@@ -47,8 +58,13 @@ app.use(limiter);
 // prevent http param pollution
 app.use(hpp());
 
+// set static folder
+app.use(express.static(path.join(__dirname, "public")));
+
 // mount routers
 app.use("/api/v1/auth", authRouter);
+app.use("/api/v1/users", userRouter);
+app.use("/api/v1/products", productsRouter);
 
 app.use(errorHandler);
 
